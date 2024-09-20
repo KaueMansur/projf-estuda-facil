@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
 
-class TituloBranco extends StatelessWidget {
+class TituloPreto extends StatelessWidget {
   final String title;
-  const TituloBranco({super.key, required this.title});
+  const TituloPreto({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {
     return Text(
       title,
       style: const TextStyle(
-        color: Colors.white,
-        fontWeight: FontWeight.bold,
-        fontSize: 40,
+        color: Colors.black,
+        fontSize: 50,
       ),
     );
   }

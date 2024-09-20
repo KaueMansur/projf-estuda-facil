@@ -3,6 +3,7 @@ import 'package:projf_estuda_facil/componentes/btn_amarelo.dart';
 import 'package:projf_estuda_facil/componentes/btn_update.dart';
 import 'package:projf_estuda_facil/componentes/campo_infos.dart';
 import 'package:projf_estuda_facil/componentes/titulo_branco.dart';
+import 'package:projf_estuda_facil/componentes/titulo_preto.dart';
 
 class TestePage extends StatelessWidget {
   const TestePage({super.key});
@@ -16,10 +17,22 @@ class TestePage extends StatelessWidget {
           children: [
             Text('Teste'),
             TextField(),
-            BtnAmarelo(),
-            TituloBranco(),
-            CampoInfos(),
-            BtnUpdate(),
+            BtnAmarelo(
+              label: 'Teste',
+            ),
+            TituloBranco(
+              title: 'Teste',
+            ),
+            TituloPreto(
+              title: 'teste',
+            ),
+            CampoInfos(
+              nomeCampo: 'Teste',
+            ),
+            BtnUpdate(
+              label: 'Teste',
+            ),
+            // Image.asset('../../images/setavoltar.png'),
           ],
         ),
       ),
