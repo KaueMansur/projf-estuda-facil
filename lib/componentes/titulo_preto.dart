@@ -10,7 +10,7 @@ class TituloPreto extends StatelessWidget {
       title,
       style: const TextStyle(
         color: Colors.black,
-        fontSize: 50,
+        fontSize: 30,
       ),
     );
   }
