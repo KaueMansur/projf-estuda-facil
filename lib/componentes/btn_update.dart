@@ -12,15 +12,15 @@ class BtnUpdate extends StatelessWidget {
       height: 50,
       child: ElevatedButton(
         onPressed: main,
+        style: const ButtonStyle(
+          backgroundColor: WidgetStatePropertyAll(Color(0xFF7FB3D5)),
+        ),
         child: Text(
-          this.label,
-          style: TextStyle(
+          label,
+          style: const TextStyle(
             fontSize: 20,
             color: Colors.black,
           ),
-        ),
-        style: const ButtonStyle(
-          backgroundColor: WidgetStatePropertyAll(Color(0xFF7FB3D5)),
         ),
       ),
     );

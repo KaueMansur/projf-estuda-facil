@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:projf_estuda_facil/componentes/btn_update.dart';
 import 'package:projf_estuda_facil/componentes/calendario.dart';
-import 'package:projf_estuda_facil/componentes/container_data.dart';
 import 'package:projf_estuda_facil/componentes/barra_progresso.dart';
-import 'package:projf_estuda_facil/componentes/container_numero.dart';
-import 'package:projf_estuda_facil/componentes/linha_de_datas.dart';
 import 'package:projf_estuda_facil/componentes/titulo_preto.dart';
 
 class CalendarioAutPage extends StatelessWidget {

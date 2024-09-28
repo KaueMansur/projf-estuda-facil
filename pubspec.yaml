@@ -65,6 +65,9 @@ flutter:
     - images/lupa.png
     - images/logo_appbar.png
     - images/icone_calendario_aut.png
+    - images/relogio.png
+    - images/ampulheta.png
+    - images/tecnica-de-pomodoro.png
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:projf_navegacao/cadastro_page.dart';
-import 'package:projf_navegacao/recuperar_senha_page.dart';
+import 'package:projf_estuda_facil/pages/cadastro_page.dart';
+import 'package:projf_estuda_facil/pages/recuperar_senha_page.dart';
 
 // Classe BtnAmarelo personalizada
 class BtnAmarelo extends StatelessWidget {
