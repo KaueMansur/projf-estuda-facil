@@ -1,108 +1,7 @@
-<<<<<<< HEAD
 import 'package:flutter/material.dart';
-
-class RecuperarSenhaPage extends StatelessWidget {
-  const RecuperarSenhaPage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
-  }
-}
-=======
-import 'package:flutter/material.dart';
-
-// Classe BtnAmarelo personalizada
-class BtnAmarelo extends StatelessWidget {
-  final String label;
-  final VoidCallback onPressed;
-
-  const BtnAmarelo({super.key, required this.label, required this.onPressed});
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      width: 350,
-      height: 50,
-      child: ElevatedButton(
-        style: ButtonStyle(
-          backgroundColor: WidgetStateProperty.all(const Color(0xFFF4EB14)),
-          shape: WidgetStateProperty.all(
-            RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20),
-            ),
-          ),
-        ),
-        onPressed: onPressed,
-        child: Text(
-          label,
-          style: const TextStyle(
-            fontSize: 18,
-            color: Color(0xFF1D35C2),
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-// Classe TituloBranco personalizada
-class TituloBranco extends StatelessWidget {
-  final String title;
-
-  const TituloBranco({super.key, required this.title});
-
-  @override
-  Widget build(BuildContext context) {
-    return Text(
-      title,
-      style: const TextStyle(
-        color: Colors.white,
-        fontWeight: FontWeight.bold,
-        fontSize: 40,
-      ),
-    );
-  }
-}
-
-// Classe CampoInfos personalizada
-class CampoInfos extends StatelessWidget {
-  final String nomeCampo;
-  const CampoInfos({super.key, required this.nomeCampo});
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      width: 350,
-      child: TextField(
-        style: const TextStyle(
-          color: Colors.white,
-        ),
-        decoration: InputDecoration(
-          focusedBorder: const OutlineInputBorder(
-            borderRadius: BorderRadius.all(Radius.circular(10)),
-            borderSide: BorderSide(
-              color: Colors.white,
-              width: 2,
-            ),
-          ),
-          contentPadding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
-          enabledBorder: const UnderlineInputBorder(
-            borderSide: BorderSide(
-              color: Colors.white,
-            ),
-          ),
-          labelText: nomeCampo,
-          labelStyle: const TextStyle(
-            fontSize: 25,
-            color: Colors.white,
-          ),
-        ),
-      ),
-    );
-  }
-}
+import 'package:projf_estuda_facil/componentes/btn_amarelo.dart';
+import 'package:projf_estuda_facil/componentes/campo_infos.dart';
+import 'package:projf_estuda_facil/componentes/titulo_branco.dart';
 
 class RecuperarSenhaPage extends StatelessWidget {
   const RecuperarSenhaPage({super.key});
@@ -197,12 +96,8 @@ class RecuperarSenhaPage extends StatelessWidget {
               const SizedBox(height: 30),
 
               // Botão "Continuar" usando BtnAmarelo
-              BtnAmarelo(
+              const BtnAmarelo(
                 label: 'CONTINUAR',
-                onPressed: () {
-                  // ao clicar em "Continuar"
-                  //  verificação do Token
-                },
               ),
 
               const SizedBox(height: 20),
@@ -228,4 +123,3 @@ class RecuperarSenhaPage extends StatelessWidget {
 void main() {
   runApp(const MaterialApp(home: RecuperarSenhaPage()));
 }
->>>>>>> eb08edc9d327450d69d1814d33d934a7eb40b256
