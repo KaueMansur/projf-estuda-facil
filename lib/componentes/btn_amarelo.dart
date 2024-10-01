@@ -16,7 +16,7 @@ class BtnAmarelo extends StatelessWidget {
         ),
         onPressed: main,
         child: Text(
-          this.label,
+          label,
           style: const TextStyle(
             fontSize: 20,
             color: Color(0xFF004AAD),

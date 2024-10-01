@@ -89,11 +89,11 @@ class CalendarioAutPage extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
-            SizedBox(height: 20,),
+            const SizedBox(height: 20,),
             const BarraProgresso(),
-            SizedBox(height: 50,),
+            const SizedBox(height: 50,),
             Container(
-              padding: EdgeInsets.symmetric(horizontal: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 10),
               width: 300,
               height: 400,
               decoration: BoxDecoration(
@@ -110,18 +110,18 @@ class CalendarioAutPage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           Image.asset('../../images/icone_calendario_aut.png'),
-                          TituloPreto(title: 'CALENDÁRIO'),
+                          const TituloPreto(title: 'CALENDÁRIO'),
                         ],
                       ),
-                      SizedBox(height: 20,),
-                      Calendario(),
+                      const SizedBox(height: 20,),
+                      const Calendario(),
                     ],
                   ),
                 ),
               ),
             ),
-            SizedBox(height: 25,),
-            Row(
+            const SizedBox(height: 25,),
+            const Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 BtnUpdate(label: 'TAREFA'),

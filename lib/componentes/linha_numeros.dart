@@ -6,7 +6,7 @@ class LinhaNumeros extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(children: [
+    return const Row(children: [
       SizedBox(width: 80,),
       ContainerNumero(numero: '1'),
       ContainerNumero(numero: '2'),

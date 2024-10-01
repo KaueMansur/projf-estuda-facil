@@ -10,7 +10,7 @@ class BarraProgresso extends StatelessWidget {
         color: Colors.grey,
         borderRadius: BorderRadius.circular(50),
       ),
-      padding: EdgeInsets.all(5),
+      padding: const EdgeInsets.all(5),
       width: 300,
       height: 50,
       child: Container(

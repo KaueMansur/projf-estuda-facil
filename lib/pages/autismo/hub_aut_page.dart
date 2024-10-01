@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:projf_estuda_facil/componentes/barra_progresso.dart';
+import 'package:projf_estuda_facil/pages/autismo/calendario_aut_page.dart';
+import 'package:projf_estuda_facil/pages/autismo/div_tempo_aut_page.dart';
+import 'package:projf_estuda_facil/pages/autismo/tarefas_aut_page.dart';
+import 'package:projf_estuda_facil/pages/padrao/hub_page.dart';
 
 class HubAutPage extends StatelessWidget {
   const HubAutPage({super.key});
@@ -85,6 +89,7 @@ class HubAutPage extends StatelessWidget {
       ),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             const BarraProgresso(),
             SizedBox(
@@ -93,12 +98,16 @@ class HubAutPage extends StatelessWidget {
               child: Container(
                 color: const Color(0xFFA6E3A1),
                 child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     SizedBox(
                       width: 300,
                       height: 70,
                       child: Container(
-                        color: const Color(0xFFA0D8F1),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5),
+                          color: const Color(0xFFA0D8F1),
+                        ),
                         child: const Text('PRÓXIMA TAREFA:'),
                       ),
                     ),
@@ -106,9 +115,83 @@ class HubAutPage extends StatelessWidget {
                       width: 300,
                       height: 70,
                       child: Container(
-                        color: const Color(0xFFA0D8F1),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5),
+                          color: const Color(0xFFA0D8F1),
+                        ),
                         child: const Text('TAREFAS DO DIA:'),
                       ),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Column(
+                          children: [
+                            IconButton(
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const CalendarioAutPage()),
+                                );
+                              },
+                              icon: Image.asset(
+                                  '../../images/icone_calendario.png'),
+                            ),
+                            const Text('Calendário'),
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            IconButton(
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const DivTempoAutPage()),
+                                );
+                              },
+                              icon: Image.asset('../../images/icone_tempo.png'),
+                            ),
+                            const Text('Tempo'),
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            IconButton(
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const TarefasAutPage()),
+                                );
+                              },
+                              icon:
+                                  Image.asset('../../images/icone_tarefas.png'),
+                            ),
+                            const Text('Tarefas'),
+                          ],
+                        ),
+                         Column(
+                          children: [
+                            IconButton(
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const HubPage()),
+                                );
+                              },
+                              icon: Image.asset('../../images/task_icon.png'),
+                            ),
+                            const Text('Padrão'),
+                          ],
+                        ),
+                      ],
                     ),
                   ],
                 ),

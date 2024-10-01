@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projf_estuda_facil/pages/autismo/hub_aut_page.dart';
 import 'package:projf_estuda_facil/pages/cadastro_page.dart';
 import 'package:projf_estuda_facil/pages/recuperar_senha_page.dart';
 
@@ -37,7 +38,8 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 29, 53, 194), //Cor de fundo da tela 
+      backgroundColor:
+          const Color.fromARGB(255, 29, 53, 194), //Cor de fundo da tela
       body: Center(
         child: SingleChildScrollView(
           child: SizedBox(
@@ -47,7 +49,7 @@ class LoginPage extends StatelessWidget {
               children: [
                 // Imagem do logo
                 Image.asset(
-                  '../assets/img/logo.png',
+                  '../../images/logo_app.png',
                   height: 200, // tamanho da imagem (logo)
                 ),
 
@@ -129,11 +131,11 @@ class LoginPage extends StatelessWidget {
 
                 const SizedBox(height: 20),
 
-                // Container azul claro 
+                // Container azul claro
                 Container(
                   padding: const EdgeInsets.all(20),
                   decoration: BoxDecoration(
-                    color: const Color(0xFFADD8E6), 
+                    color: const Color(0xFFADD8E6),
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: Column(
@@ -144,7 +146,9 @@ class LoginPage extends StatelessWidget {
                           // Navegação para a Tela 3
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => const RecuperarSenhaPage()),
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    const RecuperarSenhaPage()),
                           );
                         },
                         child: const Text(
@@ -166,7 +170,8 @@ class LoginPage extends StatelessWidget {
                           // Navegação para a cadastro
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => const CadastroPage()),
+                            MaterialPageRoute(
+                                builder: (context) => const HubAutPage()),
                           );
                         },
                       ),
@@ -184,7 +189,7 @@ class LoginPage extends StatelessWidget {
 
                       const SizedBox(height: 10),
 
-                      // Botão "Criar uma conta" 
+                      // Botão "Criar uma conta"
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
                           shape: RoundedRectangleBorder(
@@ -192,11 +197,18 @@ class LoginPage extends StatelessWidget {
                           ),
                           minimumSize: const Size(350, 50),
                           backgroundColor: Colors.white,
-                          foregroundColor: const Color.fromARGB(255, 29, 53, 194),
+                          foregroundColor:
+                              const Color.fromARGB(255, 29, 53, 194),
                         ),
-                        onPressed: () {
-                          
-                        },
+                        onPressed:
+                          () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const CadastroPage()),
+                            );
+                          },
+                        
                         child: const Text('Crie uma conta'),
                       ),
                     ],

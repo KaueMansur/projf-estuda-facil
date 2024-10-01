@@ -42,15 +42,17 @@ class TarefasPage extends StatelessWidget {
               Image.asset('../../../images/tecnica-de-pomodoro.png'),
               const Anotacoes(),
               const SizedBox(
-                  width: 375,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      BtnUpdatePadrao(label: 'SALVAR'),
-                      BtnUpdatePadrao(label: 'EXCLUIR'),
-                    ],
-                  ),
+                width: 375,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    BtnUpdatePadrao(
+                      label: 'SALVAR',
+                    ),
+                    BtnUpdatePadrao(label: 'EXCLUIR'),
+                  ],
                 ),
+              ),
             ],
           ),
         ),

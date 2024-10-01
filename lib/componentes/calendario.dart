@@ -7,7 +7,7 @@ class Calendario extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       children: [
         LinhaNumeros(),
         LinhaDeDatas(diaSemana: 'Segunda', corFundo: Colors.blue),

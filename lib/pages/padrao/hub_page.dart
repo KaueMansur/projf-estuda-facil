@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:projf_estuda_facil/componentes/btn_update_padrao.dart';
+import 'package:projf_estuda_facil/pages/autismo/tarefas_aut_page.dart';
+import 'package:projf_estuda_facil/pages/padrao/calendario_page.dart';
+import 'package:projf_estuda_facil/pages/padrao/tarefas_page.dart';
 
-class MenuPage extends StatelessWidget {
-  const MenuPage({super.key});
+class HubPage extends StatelessWidget {
+  const HubPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -87,20 +91,61 @@ class MenuPage extends StatelessWidget {
               ),
               const Spacer(),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Image.asset(
-                    'assets/calendar_icon.png', // Substitua pelo ícone do calendário
-                    width: 100,
-                    height: 100,
-                  ),
-                  Image.asset(
-                    'assets/task_icon.png', // Substitua pelo ícone das tarefas
-                    width: 100,
-                    height: 100,
-                  ),
-                ],
-              ),
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Column(
+                          children: [
+                            IconButton(
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const CalendarioPage()),
+                                );
+                              },
+                              icon: Image.asset(
+                                  '../../images/icone_calendario.png'),
+                            ),
+                            const Text('Calendário'),
+                          ],
+                        ),
+                        
+                        Column(
+                          children: [
+                            IconButton(
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const TarefasPage()),
+                                );
+                              },
+                              icon:
+                                  Image.asset('../../images/icone_tarefas.png'),
+                            ),
+                            const Text('Tarefas'),
+                          ],
+                        ),
+                         Column(
+                          children: [
+                            IconButton(
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const HubPage()),
+                                );
+                              },
+                              icon: Image.asset('../../images/logo_appbar.png'),
+                            ),
+                            const Text('Autista'),
+                          ],
+                        ),
+                      ],
+                    ),
             ],
           ),
         ),
