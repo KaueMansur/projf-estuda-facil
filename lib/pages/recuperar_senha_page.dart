@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:projf_estuda_facil/componentes/btn_amarelo.dart';
-import 'package:projf_estuda_facil/componentes/campo_infos.dart';
-import 'package:projf_estuda_facil/componentes/titulo_branco.dart';
+import 'package:projf_estuda_facil/componentes/botoes/btn_amarelo.dart';
+import 'package:projf_estuda_facil/componentes/outros/campo_infos.dart';
+import 'package:projf_estuda_facil/componentes/titulos/titulo_branco.dart';
 
 class RecuperarSenhaPage extends StatelessWidget {
   const RecuperarSenhaPage({super.key});

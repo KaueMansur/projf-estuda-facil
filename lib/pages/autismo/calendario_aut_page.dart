@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:projf_estuda_facil/componentes/btn_update.dart';
-import 'package:projf_estuda_facil/componentes/calendario.dart';
-import 'package:projf_estuda_facil/componentes/barra_progresso.dart';
-import 'package:projf_estuda_facil/componentes/titulo_preto.dart';
+import 'package:projf_estuda_facil/componentes/botoes/btn_update.dart';
+import 'package:projf_estuda_facil/componentes/calendario/calendario.dart';
+import 'package:projf_estuda_facil/componentes/outros/barra_progresso.dart';
+import 'package:projf_estuda_facil/componentes/titulos/titulo_preto.dart';
 
 class CalendarioAutPage extends StatelessWidget {
   const CalendarioAutPage({super.key});
@@ -89,9 +89,13 @@ class CalendarioAutPage extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
-            const SizedBox(height: 20,),
+            const SizedBox(
+              height: 20,
+            ),
             const BarraProgresso(),
-            const SizedBox(height: 50,),
+            const SizedBox(
+              height: 50,
+            ),
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 10),
               width: 300,
@@ -113,19 +117,29 @@ class CalendarioAutPage extends StatelessWidget {
                           const TituloPreto(title: 'CALENDÁRIO'),
                         ],
                       ),
-                      const SizedBox(height: 20,),
+                      const SizedBox(
+                        height: 20,
+                      ),
                       const Calendario(),
                     ],
                   ),
                 ),
               ),
             ),
-            const SizedBox(height: 25,),
-            const Row(
+            const SizedBox(
+              height: 25,
+            ),
+            Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                BtnUpdate(label: 'TAREFA'),
-                BtnUpdate(label: 'SALVAR'),
+                BtnUpdate(
+                  label: 'TAREFA',
+                  onPressed: () {},
+                ),
+                BtnUpdate(
+                  label: 'SALVAR',
+                  onPressed: () {},
+                ),
               ],
             )
           ],

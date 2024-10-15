@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:projf_estuda_facil/componentes/anotacoes.dart';
-import 'package:projf_estuda_facil/componentes/btn_update_padrao.dart';
+import 'package:projf_estuda_facil/componentes/outros/anotacoes.dart';
+import 'package:projf_estuda_facil/componentes/botoes/btn_update_padrao.dart';
 import 'package:projf_estuda_facil/main.dart';
 
 class TarefasPage extends StatelessWidget {
@@ -40,7 +40,7 @@ class TarefasPage extends StatelessWidget {
                 ],
               ),
               Image.asset('../../../images/tecnica-de-pomodoro.png'),
-              const Anotacoes(),
+              Anotacoes(),
               const SizedBox(
                 width: 375,
                 child: Row(

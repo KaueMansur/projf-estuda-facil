@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:projf_estuda_facil/componentes/container_numero.dart';
+import 'package:projf_estuda_facil/componentes/calendario/container_numero.dart';
 
 class ContainerSemana extends StatelessWidget {
   const ContainerSemana({super.key});

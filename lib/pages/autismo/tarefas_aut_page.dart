@@ -1,13 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:projf_estuda_facil/componentes/anotacoes.dart';
-import 'package:projf_estuda_facil/componentes/barra_progresso.dart';
-import 'package:projf_estuda_facil/componentes/btn_update.dart';
-import 'package:projf_estuda_facil/componentes/btn_update_padrao.dart';
+import 'package:projf_estuda_facil/componentes/outros/anotacoes.dart';
+import 'package:projf_estuda_facil/componentes/outros/barra_progresso.dart';
+import 'package:projf_estuda_facil/componentes/botoes/btn_update.dart';
+import 'package:projf_estuda_facil/componentes/pop_ups/popup_data.dart';
+import 'package:projf_estuda_facil/componentes/pop_ups/popup_salvar_tarefa.dart';
+import 'package:projf_estuda_facil/componentes/pop_ups/popup_tempo_estudo.dart';
 import 'package:projf_estuda_facil/main.dart';
 
-class TarefasAutPage extends StatelessWidget {
+class TarefasAutPage extends StatefulWidget {
+  // Anotacoes anotacoes = Anotacoes();
   const TarefasAutPage({super.key});
 
+  @override
+  State<TarefasAutPage> createState() => _TarefasAutPageState();
+}
+
+class _TarefasAutPageState extends State<TarefasAutPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -110,7 +118,9 @@ class TarefasAutPage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           IconButton(
-                            onPressed: main,
+                            onPressed: (){
+                              marcarData();
+                            },
                             icon: Image.asset(
                               '../../../images/relogio.png',
                               width: 50,
@@ -118,7 +128,9 @@ class TarefasAutPage extends StatelessWidget {
                             ),
                           ),
                           IconButton(
-                            onPressed: main,
+                            onPressed: (){
+                              marcarTemporizador();
+                            },
                             icon: Image.asset(
                               '../../../images/ampulheta.png',
                               width: 50,
@@ -129,18 +141,27 @@ class TarefasAutPage extends StatelessWidget {
                       ),
                       Image.asset(
                           '../../../images/tecnica_pomodoro_autismo.png'),
-                      const Anotacoes(),
+                      Anotacoes(),
                     ],
                   ),
                 ),
               ),
-              const SizedBox(
+              SizedBox(
                 width: 375,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    BtnUpdate(label: 'SALVAR'),
-                    BtnUpdate(label: 'EXCLUIR'),
+                    BtnUpdate(
+                      label: 'SALVAR',
+                      onPressed: () {
+                        salvar();
+                      },
+                    ),
+                    BtnUpdate(
+                      label: 'EXCLUIR',
+                      onPressed: () {
+                      },
+                    ),
                   ],
                 ),
               ),
@@ -148,6 +169,41 @@ class TarefasAutPage extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+  marcarTemporizador() {
+    return showDialog(
+      context: context,
+      builder: (context) {
+        return const AlertDialog(
+          contentPadding: EdgeInsets.all(0),
+          content: PopupTempoEstudo(),
+        );
+      },
+    );
+  }
+
+  marcarData() {
+    return showDialog(
+      context: context,
+      builder: (context) {
+        return const AlertDialog(
+          contentPadding: EdgeInsets.all(0),
+          content: PopupData(),
+        );
+      },
+    );
+  }
+
+  salvar() {
+    return showDialog(
+      context: context,
+      builder: (context) {
+        return const AlertDialog(
+          contentPadding: EdgeInsets.all(0),
+          content: PopupSalvarTarefa(),
+        );
+      },
     );
   }
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:projf_estuda_facil/componentes/Container_data.dart';
-import 'package:projf_estuda_facil/componentes/container_dia_semana.dart';
+import 'package:projf_estuda_facil/componentes/calendario/container_dia_semana.dart';
 
 class LinhaDeDatas extends StatelessWidget {
   final String diaSemana;

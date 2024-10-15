@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:projf_estuda_facil/componentes/container_semana.dart';
-import 'package:projf_estuda_facil/componentes/linha_de_datas.dart';
-import 'package:projf_estuda_facil/componentes/linha_numeros.dart';
+import 'package:projf_estuda_facil/componentes/calendario/container_semana.dart';
+import 'package:projf_estuda_facil/componentes/calendario/linha_de_datas.dart';
 
 class CalendarioTempo extends StatelessWidget {
   const CalendarioTempo({super.key});

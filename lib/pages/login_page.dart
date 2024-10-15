@@ -3,37 +3,11 @@ import 'package:projf_estuda_facil/pages/autismo/hub_aut_page.dart';
 import 'package:projf_estuda_facil/pages/cadastro_page.dart';
 import 'package:projf_estuda_facil/pages/recuperar_senha_page.dart';
 
-// Classe BtnAmarelo personalizada
-class BtnAmarelo extends StatelessWidget {
-  final String label;
-  final VoidCallback onPressed;
-
-  const BtnAmarelo({super.key, required this.label, required this.onPressed});
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      width: 307,
-      height: 44,
-      child: ElevatedButton(
-        style: ButtonStyle(
-          backgroundColor: WidgetStateProperty.all(const Color(0xFFF4EB14)),
-        ),
-        onPressed: onPressed,
-        child: Text(
-          label,
-          style: const TextStyle(
-            fontSize: 20,
-            color: Color(0xFF004AAD),
-          ),
-        ),
-      ),
-    );
-  }
-}
-
 class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+  final TextEditingController _usuario = TextEditingController();
+  final TextEditingController _senha = TextEditingController();
+
+  LoginPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -104,10 +78,11 @@ class LoginPage extends StatelessWidget {
 
                 const SizedBox(height: 20),
 
-                // Campo do "E-mail ou Telefone" com ícone
-                const TextField(
-                  decoration: InputDecoration(
-                    labelText: 'E-mail ou Telefone',
+                // Campo do "Usuário" com ícone
+                TextField(
+                  controller: _usuario,
+                  decoration: const InputDecoration(
+                    labelText: 'Usuário',
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(20)),
                     ),
@@ -118,9 +93,10 @@ class LoginPage extends StatelessWidget {
                 const SizedBox(height: 15),
 
                 // Campo da "Senha" com ícone
-                const TextField(
+                TextField(
                   obscureText: true,
-                  decoration: InputDecoration(
+                  controller: _senha,
+                  decoration: const InputDecoration(
                     labelText: 'Senha',
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(20)),
@@ -140,10 +116,12 @@ class LoginPage extends StatelessWidget {
                   ),
                   child: Column(
                     children: [
-                      // Texto "Esqueceu a senha?" com navegação para Esqueci Senha
-                      GestureDetector(
-                        onTap: () {
-                          // Navegação para a Tela 3
+                      ElevatedButton(
+                        style: const ButtonStyle(
+                          backgroundColor:
+                              WidgetStatePropertyAll(Colors.yellow),
+                        ),
+                        onPressed: () {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
@@ -156,10 +134,10 @@ class LoginPage extends StatelessWidget {
                           style: TextStyle(
                             color: Colors.red,
                             fontSize: 12,
-                            decoration: TextDecoration.underline,
                           ),
                         ),
                       ),
+                      // Texto "Esqueceu a senha?" com navegação para Esqueci Senha
 
                       const SizedBox(height: 20),
 
@@ -200,15 +178,13 @@ class LoginPage extends StatelessWidget {
                           foregroundColor:
                               const Color.fromARGB(255, 29, 53, 194),
                         ),
-                        onPressed:
-                          () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const CadastroPage()),
-                            );
-                          },
-                        
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const CadastroPage()),
+                          );
+                        },
                         child: const Text('Crie uma conta'),
                       ),
                     ],

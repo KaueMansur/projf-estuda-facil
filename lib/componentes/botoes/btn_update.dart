@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:projf_estuda_facil/main.dart';
 
 class BtnUpdate extends StatelessWidget {
   final String label;
-  const BtnUpdate({super.key, required this.label});
+  final VoidCallback onPressed;
+  const BtnUpdate({super.key, required this.label, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +11,7 @@ class BtnUpdate extends StatelessWidget {
       width: 150,
       height: 50,
       child: ElevatedButton(
-        onPressed: main,
+        onPressed: onPressed,
         style: const ButtonStyle(
           backgroundColor: WidgetStatePropertyAll(Color(0xFF7FB3D5)),
         ),

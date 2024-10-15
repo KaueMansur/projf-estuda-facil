@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
 class Anotacoes extends StatelessWidget {
-  const Anotacoes({super.key});
+  // TextEditingController campoAnotacoes1 = TextEditingController();
+  // TextEditingController campoAnotacoes2 = TextEditingController();
+  // TextEditingController campoAnotacoes3 = TextEditingController();
+  // TextEditingController campoAnotacoes4 = TextEditingController();
+  Anotacoes({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -9,9 +13,9 @@ class Anotacoes extends StatelessWidget {
       color: Colors.white,
       width: 250,
       height: 180,
-      child: const Column(
+      child: Column(
         children: [
-          Text(
+          const Text(
             'Anotações',
       
           ),
@@ -19,10 +23,11 @@ class Anotacoes extends StatelessWidget {
             width: 200,
             height: 35,
             child: TextField(
-              style: TextStyle(
+              // controller: campoAnotacoes1,
+              style: const TextStyle(
                  fontSize: 10,
               ),
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 border: UnderlineInputBorder(),
               ),
             ),
@@ -31,10 +36,11 @@ class Anotacoes extends StatelessWidget {
             width: 200,
             height: 35,
             child: TextField(
-              style: TextStyle(
+              // controller: campoAnotacoes2,
+              style: const TextStyle(
                  fontSize: 10,
               ),
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 border: UnderlineInputBorder(),
               ),
             ),
@@ -43,10 +49,11 @@ class Anotacoes extends StatelessWidget {
             width: 200,
             height: 35,
             child: TextField(
-              style: TextStyle(
+              // controller: campoAnotacoes3,
+              style: const TextStyle(
                  fontSize: 10,
               ),
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 border: UnderlineInputBorder(),
               ),
             ),
@@ -55,10 +62,11 @@ class Anotacoes extends StatelessWidget {
             width: 200,
             height: 35,
             child: TextField(
-              style: TextStyle(
+              // controller: campoAnotacoes4,
+              style: const TextStyle(
                  fontSize: 10,
               ),
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 border: UnderlineInputBorder(),
               ),
             ),

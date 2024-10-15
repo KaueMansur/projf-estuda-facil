@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:projf_estuda_facil/componentes/linha_de_datas.dart';
-import 'package:projf_estuda_facil/componentes/linha_numeros.dart';
+import 'package:projf_estuda_facil/componentes/calendario/linha_de_datas.dart';
+import 'package:projf_estuda_facil/componentes/calendario/linha_numeros.dart';
 
 class CalendarioPadrao extends StatelessWidget {
   const CalendarioPadrao({super.key});

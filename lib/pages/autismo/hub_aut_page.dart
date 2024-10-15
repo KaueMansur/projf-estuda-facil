@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:projf_estuda_facil/componentes/barra_progresso.dart';
+import 'package:projf_estuda_facil/componentes/outros/barra_progresso.dart';
 import 'package:projf_estuda_facil/pages/autismo/calendario_aut_page.dart';
 import 'package:projf_estuda_facil/pages/autismo/div_tempo_aut_page.dart';
 import 'package:projf_estuda_facil/pages/autismo/tarefas_aut_page.dart';
@@ -166,7 +166,7 @@ class HubAutPage extends StatelessWidget {
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) =>
-                                          const TarefasAutPage()),
+                                        TarefasAutPage()),
                                 );
                               },
                               icon:

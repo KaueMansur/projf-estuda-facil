@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:projf_estuda_facil/componentes/btn_update_padrao.dart';
-import 'package:projf_estuda_facil/pages/autismo/tarefas_aut_page.dart';
 import 'package:projf_estuda_facil/pages/padrao/calendario_page.dart';
 import 'package:projf_estuda_facil/pages/padrao/tarefas_page.dart';
 

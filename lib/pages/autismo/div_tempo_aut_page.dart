@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:projf_estuda_facil/componentes/anotacoes.dart';
-import 'package:projf_estuda_facil/componentes/barra_progresso.dart';
-import 'package:projf_estuda_facil/componentes/btn_update.dart';
-import 'package:projf_estuda_facil/componentes/btn_update_padrao.dart';
-import 'package:projf_estuda_facil/componentes/calendario_tempo.dart';
-import 'package:projf_estuda_facil/main.dart';
+import 'package:projf_estuda_facil/componentes/outros/barra_progresso.dart';
+import 'package:projf_estuda_facil/componentes/botoes/btn_update.dart';
+import 'package:projf_estuda_facil/componentes/calendario/calendario_tempo.dart';
 
 class DivTempoAutPage extends StatelessWidget {
   const DivTempoAutPage({super.key});
@@ -124,13 +121,15 @@ class DivTempoAutPage extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(
+              SizedBox(
                 width: 375,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    BtnUpdate(label: 'SALVAR'),
-                    BtnUpdate(label: 'EXCLUIR'),
+                    BtnUpdate(label: 'SALVAR',
+                    onPressed: (){},),
+                    BtnUpdate(label: 'EXCLUIR',
+                    onPressed: (){},),
                   ],
                 ),
               ),
